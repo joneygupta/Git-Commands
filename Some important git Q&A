@@ -1,3 +1,7 @@
+References :
+1) https://www.edureka.co/blog/interview-questions/git-interview-questions/
+2) https://career.guru99.com/top-40-interview-questions-on-git/
+----------------------------------------------------------------------------------
 =>1)  What is the difference between GIT and SVN?
 
 The difference between GIT and SVN is
@@ -56,3 +60,21 @@ There are couple of reason
 a)      The amend operation will destroy the state that was previously saved in a commit.  If it’s just the commit message being changed then that’s not an issue.  
 But if the contents are being amended then chances of eliminating something important remains more.
 b)      Abusing “git commit- amend” can cause a small commit to grow and acquire unrelated changes.
+
+=>10)  What is the difference between git pull and git fetch?
+
+Git pull command pulls new changes or commits from a particular branch from your central repository and updates your target branch in your local repository.
+Git fetch is also used for the same purpose but it works in a slightly different way. When you perform a git fetch, it pulls all new commits from the desired branch and stores it in a new branch in your local repository. If you want to reflect these changes in your target branch, git fetch must be followed with a git merge. Your target branch will only be updated after merging the target branch and fetched branch. Just to make it easy for you, remember the equation below:
+
+Git pull = git fetch + git merge
+
+=>11) How do you squash last N commits into a single commit?
+
+There are two options to squash last N commits into a single commit include both of the below mentioned options in your answer:
+
+If you want to write the new commit message from scratch use the following command
+git reset –soft HEAD~N &&
+git commit
+If you want to start editing the new commit message with a concatenation of the existing commit messages then you need to extract those messages and pass them to Git commit for that I will use
+git reset –soft HEAD~N &&
+git commit –edit -m”$(git log –format=%B –reverse .HEAD@{N})”
