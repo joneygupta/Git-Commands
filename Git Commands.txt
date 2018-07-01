@@ -1,3 +1,5 @@
+-----Shubham Gupta-----
+
 ##mandotory to recognize user if more than 1 people is working on same project
 1) git config --global user.name = "Shubham"  
 2) git config --global user.email = "gupta020295@gmail.com"
