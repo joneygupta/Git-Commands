@@ -1,0 +1,193 @@
+##mandotory to recognize user if more than 1 people is working on same project
+1) git config --global user.name = "Shubham"  
+2) git config --global user.email = "gupta020295@gmail.com"
+
+## will list all of your settings
+3) git config --list  
+
+##to clear the screen
+4) clear 
+
+## to check your email id
+5) git config user.email  
+
+## will give us all commands
+6) git help  
+
+## to check what commit command does (it will launch a html page with info) 
+7) git help commit 
+
+## it will initialize an empty git repository (turn out local project folder into git project) 
+8) git init
+
+
+## to see all the hidden files (these files manage git , keep track of the changes done in the repository - we should not edit them)
+9) ls -la
+
+
+## add all the changes we did in our project to our staging (index) area
+10) git add .
+
+## if you want to add an individual file to your staging area
+11) git add filename
+
+## remove files from repository and working directory 
+12) git rm .
+13) git rm filename
+
+##commit changes those are there in your staging area
+14) git commit -m "commit message"
+
+## to check all the commit we had done in our project
+15) git log
+
+##can check commits of some particular person
+16)git log --author = "shubham" 
+
+## to check if there are files which you are working on and not yet committed
+17) git status
+
+
+## before adding files to staging we can see the diff of the file we modified with the one available in the main repository
+18) git diff
+
+We cant comapre files those are there in our staging area with the one on the main repository, need to do something else for it
+19) git diff --staged
+
+## Rename files from git (we can rename from our working directory , then we need to add and commit those changes)
+20) git add home.txt
+21) git rm first.txt
+
+		OR
+git mv first.txt home.txt  (moving a file in git means renaming a file)		
+git mv home.txt foldername/patty.txt  (move file to another folder and rename as well)
+
+add the end remember we need to add and commit all the changes to our repository
+
+## Commit directaly to our repository wothout adding them to your staging (not always usefull bcoz it will grab all the files that our there in our working copy and use this command only for basic edits in our file ,dont use this command for moving and deleting files)
+22) git commit -am "message" 
+
+## Take files from your repository and put it in your working copy directory (to undo changes if you are messed up with the file in your staging , just take it from repository)
+23) git checkout -- index.html 
+
+## Unstage files (remove file from your staging area and move it back to your working directory)
+24) git reset HEAD profile.html
+
+##Getting old Versions from the Repository 
+
+25) git checkout commit_number --index.html [(It will pull that file version to our local working directory. No need to type entire number, just 4-5 starting digits) : we need to commit it later then.]
+
+
+GitHub : 
+
+##connect remotely with our github public url 
+26) git remote add nickname url
+Ex: git remote add origin   https://github.com/joneygupta/MongoDb.git
+
+Set Url :  git remote set-url https://github.com/joneygupta/MongoDb.git
+
+##pushing to a github repository:
+26) git push -u nickname master  
+Ex: git push -u origin   master
+
+##Gitignore and GitHub Desktop and check Bitbucket as well
+27) Download GitHub Desktop , which is a GUI version of GITHUB : easy to handle
+
+## Fetch command in Git (fetching all commits from git repository)
+28) git fetch 
+
+
+## Pull command in Git (git fetch + git merge)
+29) git pull -u origin master
+
+## Branches in Git
+30) 
+i) git branch branchname (create branch)
+ii) git checkout branchname  (switch baracnh)
+	Ex : git checkout master
+
+iii) Merge to the master branch :
+	a) git checkout master
+	b) git merge branchname
+
+iv) git branch -d branchname (delete branch after merging it to the master branch)	
+v) We can also push our changes to our branch version of repo.
+
+##Clone repository (clone any repositry from github server to our local to work on it)
+31) git clone url (url of your repository)
+
+##clone vs pull in Git
+32) 
+i) git clone means you are making a copy of the repository in your system
+ii) git pull means you are fetching the last modified reopo.
+iii) pull basically is used to view other team mates added code, if you are working in a team (please get me the changes that may be updated by others)
+iv) clone is basically downloading repo. and pull is refreshing the repo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+git pull remote master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
